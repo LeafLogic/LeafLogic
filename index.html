@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeafLogic - AI-Powered Plant Care Robot</title>
+    <meta name="description" content="Revolutionizing indoor gardening with AI-powered automation. Let your plants thrive on autopilot with Botani, the smart plant care robot.">
+    <meta name="author" content="LeafLogic">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LeafLogic - AI-Powered Plant Care Robot" />
+    <meta property="og:description" content="Revolutionizing indoor gardening with AI-powered automation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/leaflogic-logo.png" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LeafLogic - AI-Powered Plant Care Robot" />
+    <meta name="twitter:description" content="Revolutionizing indoor gardening with AI-powered automation." />
+    <meta name="twitter:image" content="images/leaflogic-logo.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="images/leaflogic-logo.png" alt="LeafLogic" class="logo">
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#product" class="nav-link">Product</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-outline">Learn More</button>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Let your plants thrive
+                    <span class="hero-title-accent">on autopilot</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Meet <strong>Botani</strong>, the AI-powered robot that revolutionizes 
+                    indoor gardening with intelligent plant care and monitoring.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg">
+                        Discover Botani
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                    <button class="btn btn-outline btn-lg">
+                        <i data-lucide="play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i data-lucide="bot"></i>
+                        <span>AI-Powered</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="leaf"></i>
+                        <span>Smart Care</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="zap"></i>
+                        <span>24/7 Monitoring</span>
+                    </div>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">99%</div>
+                        <div class="stat-label">Plant Survival Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">Plant Species Supported</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Continuous Monitoring</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">90%</div>
+                        <div class="stat-label">Water Savings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    About <span class="text-accent">Botani</span>
+                </h2>
+                <p class="section-subtitle">
+                    Botani represents the future of indoor gardening. Our AI-powered robot combines cutting-edge technology 
+                    with nature's wisdom to create the perfect environment for your plants to flourish.
+                </p>
+            </div>
+            
+            <div class="mission-card">
+                <h3>Our Mission</h3>
+                <p>
+                    We believe that everyone deserves to experience the joy and benefits of thriving plants, 
+                    regardless of their gardening experience. Botani makes plant care effortless, intelligent, 
+                    and accessible to all, while promoting a deeper connection with nature in our modern lives.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h4>Health Monitoring</h4>
+                    <p>Advanced sensors continuously monitor your plant's vital signs and environmental conditions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="droplets"></i>
+                    </div>
+                    <h4>Smart Watering</h4>
+                    <p>Automated watering system delivers the perfect amount of water based on soil moisture and plant needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <h4>AI Intelligence</h4>
+                    <p>Machine learning algorithms adapt to your specific plants and optimize care routines over time.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h4>Mobile App</h4>
+                    <p>Control and monitor your plants remotely with real-time notifications and detailed insights.</p>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <h3>Powered by Advanced Technology</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">IoT Sensors</span>
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">Cloud Computing</span>
+                    <span class="tech-tag">Mobile Integration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Section -->
+    <section id="presentation" class="presentation">
+        <div class="container">
+            <div class="presentation-content">
+                <div class="presentation-text">
+                    <h2>Introducing <span class="text-accent">Botani</span></h2>
+                    <p>
+                        Our revolutionary AI-powered plant care robot that combines cutting-edge technology 
+                        with nature's wisdom to create the perfect environment for your plants to flourish.
+                    </p>
+                    
+                    <div class="highlights">
+                        <h3>Why Choose Botani?</h3>
+                        <ul class="highlights-list">
+                            <li><i data-lucide="check-circle"></i> AI-powered plant recognition and care</li>
+                            <li><i data-lucide="check-circle"></i> Real-time environmental monitoring</li>
+                            <li><i data-lucide="check-circle"></i> Automated watering and nutrient delivery</li>
+                            <li><i data-lucide="check-circle"></i> Mobile app for remote control</li>
+                            <li><i data-lucide="check-circle"></i> Machine learning optimization</li>
+                            <li><i data-lucide="check-circle"></i> Sustainable and eco-friendly design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="presentation-buttons">
+                        <button class="btn btn-primary btn-lg">
+                            <i data-lucide="play"></i>
+                            Watch Presentation
+                        </button>
+                        <button class="btn btn-outline btn-lg">
+                            Learn More
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="presentation-visual">
+                    <div class="presentation-card">
+                        <div class="video-placeholder">
+                            <i data-lucide="play" class="play-icon"></i>
+                            <p>Product Presentation</p>
+                        </div>
+                        <h4>Botani in Action</h4>
+                        <p>See how our AI-powered robot cares for plants with precision and intelligence.</p>
+                    </div>
+                    
+                    <div class="floating-stat stat-1">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-text">Care Available</div>
+                    </div>
+                    
+                    <div class="floating-stat stat-2">
+                        <div class="stat-number">AI</div>
+                        <div class="stat-text">Powered</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="presentation-stats">
+                <h3>Trusted by Plant Enthusiasts Worldwide</h3>
+                <p>Join thousands of users who have transformed their indoor gardening experience with Botani.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="stat-value">1000+</div>
+                        <div class="stat-label">Happy Users</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="stat-value">95%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div class="stat-value">15+</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our <span class="text-accent">Team</span></h2>
+                <p class="section-subtitle">
+                    Passionate innovators dedicated to revolutionizing plant care through technology and AI.
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="images/team-member-1.jpg" alt="Team Member">
+                    </div>
+                    <h4>Alex Chen</h4>
+                    <p class="member-role">CEO & Co-Founder</p>
+                    <p class="member-bio">
+                        AI researcher with 8+ years in robotics and plant science. 
+                        Passionate about making technology accessible to everyone.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="images/team-member-2.jpg" alt="Team Member">
+                    </div>
+                    <h4>Sarah Johnson</h4>
+                    <p class="member-role">CTO & Co-Founder</p>
+                    <p class="member-bio">
+                        Robotics engineer specializing in autonomous systems. 
+                        Led development of smart home automation solutions.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="images/team-member-3.jpg" alt="Team Member">
+                    </div>
+                    <h4>Dr. Michael Park</h4>
+                    <p class="member-role">Head of Research</p>
+                    <p class="member-bio">
+                        Plant biologist with expertise in environmental monitoring. 
+                        Published 20+ papers on sustainable agriculture.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="images/team-member-4.jpg" alt="Team Member">
+                    </div>
+                    <h4>Emily Rodriguez</h4>
+                    <p class="member-role">Product Designer</p>
+                    <p class="member-bio">
+                        UX/UI designer focused on creating intuitive experiences. 
+                        Former design lead at major tech companies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="text-accent">Research</span></h2>
+                <p class="section-subtitle">
+                    Groundbreaking studies and innovations that drive Botani's intelligent plant care capabilities.
+                </p>
+            </div>
+            
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3>AI Plant Recognition</h3>
+                    <p>
+                        Advanced computer vision algorithms that can identify over 500 plant species 
+                        and detect early signs of disease or stress.
+                    </p>
+                    <div class="research-stats">
+                        <span>500+ Species</span>
+                        <span>99.2% Accuracy</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i data-lucide="activity"></i>
+                    </div>
+                    <h3>Environmental Monitoring</h3>
+                    <p>
+                        Real-time sensors that track soil moisture, temperature, humidity, 
+                        and light levels to optimize growing conditions.
+                    </p>
+                    <div class="research-stats">
+                        <span>24/7 Monitoring</span>
+                        <span>5 Sensors</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3>Smart Watering System</h3>
+                    <p>
+                        Precision irrigation that delivers the exact amount of water 
+                        each plant needs, reducing waste by up to 90%.
+                    </p>
+                    <div class="research-stats">
+                        <span>90% Water Savings</span>
+                        <span>Precision Control</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prototype Section -->
+    <section id="prototype" class="prototype">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Prototype <span class="text-accent">Development</span></h2>
+                <p class="section-subtitle">
+                    From concept to reality - see how Botani evolved through iterative design and testing.
+                </p>
+            </div>
+            
+            <div class="prototype-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Phase 1: Concept Design</h3>
+                        <p>Initial research and concept development focusing on core functionality and user needs.</p>
+                        <div class="timeline-date">2023 Q1</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Phase 2: Hardware Development</h3>
+                        <p>Building the physical robot with sensors, actuators, and control systems.</p>
+                        <div class="timeline-date">2023 Q2</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Phase 3: AI Integration</h3>
+                        <p>Implementing machine learning algorithms for plant recognition and care optimization.</p>
+                        <div class="timeline-date">2023 Q3</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Phase 4: Testing & Refinement</h3>
+                        <p>Extensive testing with real plants and user feedback to perfect the experience.</p>
+                        <div class="timeline-date">2023 Q4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section id="product" class="product-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Product <span class="text-accent">Showcase</span></h2>
+                <p class="section-subtitle">
+                    Discover the features and capabilities that make Botani the ultimate plant care companion.
+                </p>
+            </div>
+            
+            <div class="product-features">
+                <div class="feature-showcase">
+                    <div class="feature-image">
+                        <img src="images/botani-robot.jpg" alt="Botani Robot">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Smart Robot Design</h3>
+                        <p>
+                            Elegant, compact design that fits seamlessly into any home environment. 
+                            Equipped with advanced sensors and precision actuators for gentle plant care.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Compact footprint (12" x 12")</li>
+                            <li>Quiet operation (< 30dB)</li>
+                            <li>Battery life: 48 hours</li>
+                            <li>Water tank: 2L capacity</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="feature-showcase reverse">
+                    <div class="feature-image">
+                        <img src="images/mobile-app.jpg" alt="Mobile App">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Mobile App Control</h3>
+                        <p>
+                            Complete control and monitoring through our intuitive mobile app. 
+                            Get real-time updates, adjust settings, and track plant health from anywhere.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Real-time monitoring</li>
+                            <li>Custom care schedules</li>
+                            <li>Plant health analytics</li>
+                            <li>Remote control capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/leaflogic-logo-white.png" alt="LeafLogic" class="footer-logo">
+                    <p>
+                        Revolutionizing indoor gardening with AI-powered automation. 
+                        Let your plants thrive on autopilot with Botani, the smart plant care robot.
+                    </p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hello@leaflogic.ai</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>University Innovation Lab, Tech Campus</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <p>Follow our journey and get updates on Botani's development.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h5>Stay Updated</h5>
+                        <p>Get notified about Botani's launch and updates.</p>
+                        <button class="btn btn-secondary">Notify Me</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LeafLogic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
