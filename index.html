@@ -30,246 +30,448 @@
 </head>
 <body>
     <!-- Header -->
-    <header id="header" class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="nav-logo">
-                    <img src="images/a82d138d-d981-495b-971a-1db1f7dad935.png" alt="LeafLogic" class="logo">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img 
+                        src="images/a82d138d-d981-495b-971a-1db1f7dad935.png" 
+                        alt="LeafLogic" 
+                        class="h-8 lg:h-10 w-auto"
+                    />
                 </div>
-                
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#team" class="nav-link">Team</a></li>
-                    <li><a href="#research" class="nav-link">Research</a></li>
-                    <li><a href="#product" class="nav-link">Product</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <div class="nav-buttons">
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">About</a>
+                    <a href="#team" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Team</a>
+                    <a href="#research" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Research</a>
+                    <a href="#product" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Product</a>
+                    <a href="#contact" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-4">
                     <button class="btn btn-outline">Learn More</button>
                     <button class="btn btn-primary">Get Started</button>
                 </div>
-                
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Toggle menu">
                     <i data-lucide="menu"></i>
                 </button>
-            </nav>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden py-4 border-t border-border/50 hidden" id="mobile-menu">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#about" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">About</a>
+                    <a href="#team" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Team</a>
+                    <a href="#research" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Research</a>
+                    <a href="#product" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Product</a>
+                    <a href="#contact" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Contact</a>
+                    <div class="flex flex-col space-y-2 pt-4">
+                        <button class="btn btn-outline w-full">Learn More</button>
+                        <button class="btn btn-primary w-full">Get Started</button>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 pt-20">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-5xl mx-auto">
+                <!-- Main Headline -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
                     Let your plants thrive
-                    <span class="hero-title-accent">on autopilot</span>
+                    <span class="block text-accent">on autopilot</span>
                 </h1>
-                
-                <p class="hero-subtitle">
-                    Meet <strong>Botani</strong>, the AI-powered robot that revolutionizes 
+
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Meet <span class="font-semibold text-accent">Botani</span>, the AI-powered robot that revolutionizes 
                     indoor gardening with intelligent plant care and monitoring.
                 </p>
-                
-                <div class="hero-buttons">
-                    <button class="btn btn-primary btn-lg">
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <button class="btn btn-primary btn-lg group">
                         Discover Botani
-                        <i data-lucide="arrow-right"></i>
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </button>
-                    <button class="btn btn-outline btn-lg">
-                        <i data-lucide="play"></i>
+                    <button class="btn btn-outline btn-lg group">
+                        <i data-lucide="play" class="mr-2 w-5 h-5"></i>
                         Watch Demo
                     </button>
                 </div>
-                
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <i data-lucide="bot"></i>
-                        <span>AI-Powered</span>
+
+                <!-- Key Features -->
+                <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
+                        <i data-lucide="bot" class="w-6 h-6 text-accent"></i>
+                        <span class="font-medium">AI-Powered</span>
                     </div>
-                    <div class="feature-item">
-                        <i data-lucide="leaf"></i>
-                        <span>Smart Care</span>
+                    <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
+                        <i data-lucide="leaf" class="w-6 h-6 text-accent"></i>
+                        <span class="font-medium">Smart Care</span>
                     </div>
-                    <div class="feature-item">
-                        <i data-lucide="zap"></i>
-                        <span>24/7 Monitoring</span>
+                    <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
+                        <i data-lucide="zap" class="w-6 h-6 text-accent"></i>
+                        <span class="font-medium">24/7 Monitoring</span>
                     </div>
                 </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-value">99%</div>
-                        <div class="stat-label">Plant Survival Rate</div>
+
+                <!-- Stats -->
+                <div class="mt-16 grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">99%</div>
+                        <div class="text-muted-foreground">Plant Survival Rate</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">Plant Species Supported</div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">50+</div>
+                        <div class="text-muted-foreground">Plant Species Supported</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value">24/7</div>
-                        <div class="stat-label">Continuous Monitoring</div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">24/7</div>
+                        <div class="text-muted-foreground">Continuous Monitoring</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value">90%</div>
-                        <div class="stat-label">Water Savings</div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">90%</div>
+                        <div class="text-muted-foreground">Water Savings</div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="scroll-indicator">
-            <div class="scroll-dot"></div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-muted-foreground/50 rounded-full mt-2 animate-pulse"></div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    About <span class="text-accent">Botani</span>
+    <section id="about" class="py-16 lg:py-24 bg-gradient-subtle">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+                    About <span class="text-accent">LeafLogic</span>
                 </h2>
-                <p class="section-subtitle">
-                    Botani represents the future of indoor gardening. Our AI-powered robot combines cutting-edge technology 
-                    with nature's wisdom to create the perfect environment for your plants to flourish.
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    We're revolutionizing indoor gardening through cutting-edge AI technology and robotics, 
+                    making plant care accessible, efficient, and sustainable for everyone.
                 </p>
             </div>
-            
-            <div class="mission-card">
-                <h3>Our Mission</h3>
-                <p>
-                    We believe that everyone deserves to experience the joy and benefits of thriving plants, 
-                    regardless of their gardening experience. Botani makes plant care effortless, intelligent, 
-                    and accessible to all, while promoting a deeper connection with nature in our modern lives.
-                </p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="heart"></i>
+
+            <!-- Mission Card -->
+            <div class="bg-card rounded-2xl p-8 lg:p-12 shadow-card mb-16">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+                            Our Mission
+                        </h3>
+                        <p class="text-lg text-muted-foreground mb-6 leading-relaxed">
+                            To democratize indoor gardening by creating intelligent, autonomous systems that 
+                            make plant care effortless and enjoyable. We believe everyone should have access 
+                            to the benefits of living with plants, regardless of their experience level.
+                        </p>
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            Our AI-powered robots monitor, water, and care for your plants 24/7, ensuring 
+                            optimal growth conditions while you focus on enjoying the beauty and benefits 
+                            of your indoor garden.
+                        </p>
                     </div>
-                    <h4>Health Monitoring</h4>
-                    <p>Advanced sensors continuously monitor your plant's vital signs and environmental conditions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="droplets"></i>
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-8 text-center">
+                            <i data-lucide="target" class="w-16 h-16 text-accent mx-auto mb-4"></i>
+                            <h4 class="text-xl font-bold text-foreground mb-2">Smart Automation</h4>
+                            <p class="text-muted-foreground">AI-driven care that adapts to each plant's needs</p>
+                        </div>
                     </div>
-                    <h4>Smart Watering</h4>
-                    <p>Automated watering system delivers the perfect amount of water based on soil moisture and plant needs.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="bot"></i>
-                    </div>
-                    <h4>AI Intelligence</h4>
-                    <p>Machine learning algorithms adapt to your specific plants and optimize care routines over time.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i data-lucide="smartphone"></i>
-                    </div>
-                    <h4>Mobile App</h4>
-                    <p>Control and monitor your plants remotely with real-time notifications and detailed insights.</p>
                 </div>
             </div>
-            
-            <div class="tech-stack">
-                <h3>Powered by Advanced Technology</h3>
-                <div class="tech-tags">
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">IoT Sensors</span>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card rounded-xl p-6 shadow-card hover:shadow-glow transition-all duration-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="brain" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-foreground mb-3">AI-Powered Intelligence</h4>
+                    <p class="text-muted-foreground">
+                        Advanced machine learning algorithms that understand and adapt to each plant's unique needs.
+                    </p>
+                </div>
+                <div class="bg-card rounded-xl p-6 shadow-card hover:shadow-glow transition-all duration-300">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="droplets" class="w-6 h-6 text-accent"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-foreground mb-3">Precision Watering</h4>
+                    <p class="text-muted-foreground">
+                        Smart irrigation systems that deliver the perfect amount of water at the right time.
+                    </p>
+                </div>
+                <div class="bg-card rounded-xl p-6 shadow-card hover:shadow-glow transition-all duration-300">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="monitor" class="w-6 h-6 text-secondary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-foreground mb-3">24/7 Monitoring</h4>
+                    <p class="text-muted-foreground">
+                        Continuous monitoring of soil moisture, light levels, and plant health indicators.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-bold text-foreground mb-8">Technology Stack</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
                     <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">IoT Sensors</span>
                     <span class="tech-tag">Cloud Computing</span>
-                    <span class="tech-tag">Mobile Integration</span>
+                    <span class="tech-tag">Machine Learning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-background to-primary/5">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="presentation-text">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                        Revolutionizing Plant Care with AI
+                    </h2>
+                    <p class="text-lg text-muted-foreground mb-8 leading-relaxed">
+                        Our innovative approach combines cutting-edge robotics with advanced artificial intelligence 
+                        to create a truly autonomous plant care system. Botani learns from your plants and adapts 
+                        its care routine to ensure optimal growth conditions.
+                    </p>
+                    
+                    <div class="highlights mb-8">
+                        <h3 class="text-xl font-bold text-foreground mb-4">Key Highlights</h3>
+                        <ul class="highlights-list">
+                            <li><i data-lucide="check" class="w-5 h-5 text-accent"></i> Intelligent soil analysis and nutrient management</li>
+                            <li><i data-lucide="check" class="w-5 h-5 text-accent"></i> Automated pest detection and prevention</li>
+                            <li><i data-lucide="check" class="w-5 h-5 text-accent"></i> Climate control and environmental optimization</li>
+                            <li><i data-lucide="check" class="w-5 h-5 text-accent"></i> Real-time health monitoring and alerts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="presentation-buttons">
+                        <button class="btn btn-primary">Learn More</button>
+                        <button class="btn btn-outline">View Demo</button>
+                    </div>
+                </div>
+                
+                <div class="presentation-visual">
+                    <div class="presentation-card">
+                        <div class="video-placeholder">
+                            <div class="play-icon">
+                                <i data-lucide="play" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Stats -->
+                    <div class="floating-stat stat-1">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-text">Success Rate</div>
+                    </div>
+                    <div class="floating-stat stat-2">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-text">Monitoring</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Presentation Stats -->
+            <div class="presentation-stats mt-16">
+                <h3 class="text-2xl font-bold text-center text-foreground mb-12">Performance Metrics</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="trending-up" class="w-8 h-8"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-accent mb-2">95%</div>
+                        <div class="text-muted-foreground">Growth Improvement</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="droplets" class="w-8 h-8"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-accent mb-2">90%</div>
+                        <div class="text-muted-foreground">Water Savings</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="clock" class="w-8 h-8"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-accent mb-2">24/7</div>
+                        <div class="text-muted-foreground">Care Availability</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-accent mb-2">1000+</div>
+                        <div class="text-muted-foreground">Happy Users</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="team">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Meet Our <span class="text-accent">Team</span></h2>
-                <p class="section-subtitle">
+    <section id="team" class="py-16 lg:py-24 bg-gradient-subtle">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+                    Meet Our <span class="text-accent">Team</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                     A passionate group of students combining technology, nature, and innovation 
                     to revolutionize how we care for our green companions. We collaboratively developed our prototype using tools like TinkerCAD and real hardware testing.
                 </p>
             </div>
-            
-            <div class="team-grid">
+
+            <!-- Team Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 <div class="team-member">
+                    <!-- Profile Image -->
                     <div class="member-avatar">
-                        <img src="images/414aa39f-d30d-4f0b-9c27-c11e02a7a438.png" alt="Vedanth Yada">
+                        <img
+                            src="images/414aa39f-d30d-4f0b-9c27-c11e02a7a438.png"
+                            alt="Vedanth Yada"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
                     </div>
-                    <h4>Vedanth Yada</h4>
-                    <p class="member-role">Co-founder & CEO</p>
-                    <p class="member-description">Chief Executive Officer</p>
+
+                    <!-- Member Info -->
+                    <h3 class="text-xl font-bold text-foreground mb-2">
+                        Vedanth Yada
+                    </h3>
+                    <p class="text-accent font-semibold mb-2">
+                        Co-founder & CEO
+                    </p>
+                    <p class="text-muted-foreground mb-6">
+                        Chief Executive Officer
+                    </p>
+
+                    <!-- Social Links -->
                     <div class="member-social">
                         <a href="#" class="social-link">
-                            <i data-lucide="instagram"></i>
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
                         </a>
-                        <a href="mailto:vedanth@leaflogic.ai" class="social-link">
-                            <i data-lucide="mail"></i>
+                        <a href="#" class="social-link">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="team-member">
+                    <!-- Profile Image -->
                     <div class="member-avatar">
-                        <img src="images/639e635e-d14b-45bf-a6b7-6314188fe97c.png" alt="Siddhanth Sathish">
+                        <img
+                            src="images/639e635e-d14b-45bf-a6b7-6314188fe97c.png"
+                            alt="Siddhanth Sathish"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
                     </div>
-                    <h4>Siddhanth Sathish</h4>
-                    <p class="member-role">Co-founder & CTO</p>
-                    <p class="member-description">Chief Technology Officer</p>
+
+                    <!-- Member Info -->
+                    <h3 class="text-xl font-bold text-foreground mb-2">
+                        Siddhanth Sathish
+                    </h3>
+                    <p class="text-accent font-semibold mb-2">
+                        Co-founder & CTO
+                    </p>
+                    <p class="text-muted-foreground mb-6">
+                        Chief Technology Officer
+                    </p>
+
+                    <!-- Social Links -->
                     <div class="member-social">
                         <a href="#" class="social-link">
-                            <i data-lucide="instagram"></i>
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
                         </a>
-                        <a href="mailto:siddhanth@leaflogic.ai" class="social-link">
-                            <i data-lucide="mail"></i>
+                        <a href="#" class="social-link">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="team-member">
+                    <!-- Profile Image -->
                     <div class="member-avatar">
-                        <img src="images/d19fcccb-b0f7-4e92-ac9e-a131deab7dc3.png" alt="Karthik Bimod">
+                        <img
+                            src="images/d19fcccb-b0f7-4e92-ac9e-a131deab7dc3.png"
+                            alt="Karthik Bimod"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
                     </div>
-                    <h4>Karthik Bimod</h4>
-                    <p class="member-role">Co-founder & COO</p>
-                    <p class="member-description">Chief Operating Officer</p>
+
+                    <!-- Member Info -->
+                    <h3 class="text-xl font-bold text-foreground mb-2">
+                        Karthik Bimod
+                    </h3>
+                    <p class="text-accent font-semibold mb-2">
+                        Co-founder & COO
+                    </p>
+                    <p class="text-muted-foreground mb-6">
+                        Chief Operating Officer
+                    </p>
+
+                    <!-- Social Links -->
                     <div class="member-social">
                         <a href="#" class="social-link">
-                            <i data-lucide="instagram"></i>
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
                         </a>
-                        <a href="mailto:karthik@leaflogic.ai" class="social-link">
-                            <i data-lucide="mail"></i>
+                        <a href="#" class="social-link">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Team Values -->
             <div class="team-values">
-                <h3>Our Values</h3>
+                <h3 class="text-2xl font-bold text-center text-foreground mb-8">
+                    Our Values
+                </h3>
                 <div class="values-grid">
                     <div class="value-item">
-                        <h4>Innovation</h4>
-                        <p>We push the boundaries of technology to create solutions that make a real difference.</p>
+                        <h4 class="text-lg font-semibold text-accent mb-3">Innovation</h4>
+                        <p class="text-muted-foreground">
+                            We push the boundaries of technology to create solutions that make a real difference.
+                        </p>
                     </div>
                     <div class="value-item">
-                        <h4>Sustainability</h4>
-                        <p>Every decision we make considers the environmental impact and promotes green living.</p>
+                        <h4 class="text-lg font-semibold text-accent mb-3">Sustainability</h4>
+                        <p class="text-muted-foreground">
+                            Every decision we make considers the environmental impact and promotes green living.
+                        </p>
                     </div>
                     <div class="value-item">
-                        <h4>Accessibility</h4>
-                        <p>We believe everyone should have access to the joy and benefits of plant care.</p>
+                        <h4 class="text-lg font-semibold text-accent mb-3">Accessibility</h4>
+                        <p class="text-muted-foreground">
+                            We believe everyone should have access to the joy and benefits of plant care.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -277,58 +479,56 @@
     </section>
 
     <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our <span class="text-accent">Research</span></h2>
-                <p class="section-subtitle">
-                    Groundbreaking studies and innovations that drive Botani's intelligent plant care capabilities.
+    <section id="research" class="py-16 lg:py-24 bg-gradient-to-br from-background to-secondary/5">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+                    Our <span class="text-accent">Research</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    Cutting-edge research in AI, robotics, and plant science driving our innovative solutions.
                 </p>
             </div>
-            
-            <div class="research-grid">
+
+            <!-- Research Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="research-card">
                     <div class="research-icon">
-                        <i data-lucide="brain"></i>
+                        <i data-lucide="brain" class="w-8 h-8"></i>
                     </div>
-                    <h3>AI Plant Recognition</h3>
-                    <p>
-                        Advanced computer vision algorithms that can identify over 500 plant species 
-                        and detect early signs of disease or stress.
+                    <h3 class="text-xl font-bold text-foreground mb-4">AI & Machine Learning</h3>
+                    <p class="text-muted-foreground mb-6">
+                        Advanced algorithms for plant recognition, health monitoring, and predictive care.
                     </p>
                     <div class="research-stats">
-                        <span>500+ Species</span>
-                        <span>99.2% Accuracy</span>
+                        <span class="text-accent font-bold">95%</span> accuracy in plant identification
                     </div>
                 </div>
                 
                 <div class="research-card">
                     <div class="research-icon">
-                        <i data-lucide="activity"></i>
+                        <i data-lucide="cog" class="w-8 h-8"></i>
                     </div>
-                    <h3>Environmental Monitoring</h3>
-                    <p>
-                        Real-time sensors that track soil moisture, temperature, humidity, 
-                        and light levels to optimize growing conditions.
+                    <h3 class="text-xl font-bold text-foreground mb-4">Robotics & Automation</h3>
+                    <p class="text-muted-foreground mb-6">
+                        Precision robotics for watering, monitoring, and environmental control.
                     </p>
                     <div class="research-stats">
-                        <span>24/7 Monitoring</span>
-                        <span>5 Sensors</span>
+                        <span class="text-accent font-bold">24/7</span> autonomous operation
                     </div>
                 </div>
                 
                 <div class="research-card">
                     <div class="research-icon">
-                        <i data-lucide="zap"></i>
+                        <i data-lucide="leaf" class="w-8 h-8"></i>
                     </div>
-                    <h3>Smart Watering System</h3>
-                    <p>
-                        Precision irrigation that delivers the exact amount of water 
-                        each plant needs, reducing waste by up to 90%.
+                    <h3 class="text-xl font-bold text-foreground mb-4">Plant Science</h3>
+                    <p class="text-muted-foreground mb-6">
+                        Research in optimal growing conditions and plant health indicators.
                     </p>
                     <div class="research-stats">
-                        <span>90% Water Savings</span>
-                        <span>Precision Control</span>
+                        <span class="text-accent font-bold">50+</span> plant species supported
                     </div>
                 </div>
             </div>
@@ -336,49 +536,53 @@
     </section>
 
     <!-- Prototype Section -->
-    <section id="prototype" class="prototype">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Prototype <span class="text-accent">Development</span></h2>
-                <p class="section-subtitle">
-                    From concept to reality - see how Botani evolved through iterative design and testing.
+    <section class="py-16 lg:py-24 bg-gradient-subtle">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+                    Development <span class="text-accent">Timeline</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    Our journey from concept to prototype, showcasing the iterative development process.
                 </p>
             </div>
-            
+
+            <!-- Timeline -->
             <div class="prototype-timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Phase 1: Concept Design</h3>
-                        <p>Initial research and concept development focusing on core functionality and user needs.</p>
-                        <div class="timeline-date">2023 Q1</div>
+                        <h3 class="text-xl font-bold text-foreground mb-2">Concept Development</h3>
+                        <p class="text-muted-foreground mb-2">Initial research and ideation phase</p>
+                        <div class="timeline-date">Phase 1</div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Phase 2: Hardware Development</h3>
-                        <p>Building the physical robot with sensors, actuators, and control systems.</p>
-                        <div class="timeline-date">2023 Q2</div>
+                        <h3 class="text-xl font-bold text-foreground mb-2">Prototype Design</h3>
+                        <p class="text-muted-foreground mb-2">CAD modeling and component selection</p>
+                        <div class="timeline-date">Phase 2</div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Phase 3: AI Integration</h3>
-                        <p>Implementing machine learning algorithms for plant recognition and care optimization.</p>
-                        <div class="timeline-date">2023 Q3</div>
+                        <h3 class="text-xl font-bold text-foreground mb-2">Hardware Assembly</h3>
+                        <p class="text-muted-foreground mb-2">Physical construction and testing</p>
+                        <div class="timeline-date">Phase 3</div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Phase 4: Testing & Refinement</h3>
-                        <p>Extensive testing with real plants and user feedback to perfect the experience.</p>
-                        <div class="timeline-date">2023 Q4</div>
+                        <h3 class="text-xl font-bold text-foreground mb-2">Software Integration</h3>
+                        <p class="text-muted-foreground mb-2">AI implementation and system optimization</p>
+                        <div class="timeline-date">Phase 4</div>
                     </div>
                 </div>
             </div>
@@ -386,34 +590,38 @@
     </section>
 
     <!-- Product Showcase Section -->
-    <section id="product" class="product-showcase">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Product <span class="text-accent">Showcase</span></h2>
-                <p class="section-subtitle">
-                    Discover the features and capabilities that make Botani the ultimate plant care companion.
+    <section id="product" class="py-16 lg:py-24 bg-gradient-to-br from-background to-primary/5">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+                    Product <span class="text-accent">Showcase</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    Discover the features that make Botani the ultimate plant care companion.
                 </p>
             </div>
-            
+
+            <!-- Product Features -->
             <div class="product-features">
                 <div class="feature-showcase">
                     <div class="feature-image">
                         <div class="image-placeholder">
-                            <i data-lucide="bot"></i>
-                            <p>Botani Robot</p>
+                            <i data-lucide="bot" class="w-16 h-16 text-accent"></i>
+                            <p class="text-muted-foreground mt-4">AI-Powered Robot</p>
                         </div>
                     </div>
                     <div class="feature-content">
-                        <h3>Smart Robot Design</h3>
-                        <p>
-                            Elegant, compact design that fits seamlessly into any home environment. 
-                            Equipped with advanced sensors and precision actuators for gentle plant care.
+                        <h3 class="text-2xl font-bold text-foreground mb-4">Intelligent Automation</h3>
+                        <p class="text-lg text-muted-foreground mb-6">
+                            Botani uses advanced AI to monitor and care for your plants automatically. 
+                            It learns from your plants' behavior and adapts its care routine accordingly.
                         </p>
                         <ul class="feature-list">
-                            <li>Compact footprint (12" x 12")</li>
-                            <li>Quiet operation (< 30dB)</li>
-                            <li>Battery life: 48 hours</li>
-                            <li>Water tank: 2L capacity</li>
+                            <li>Smart soil moisture detection</li>
+                            <li>Automated watering system</li>
+                            <li>Light level optimization</li>
+                            <li>Temperature and humidity control</li>
                         </ul>
                     </div>
                 </div>
@@ -421,20 +629,20 @@
                 <div class="feature-showcase reverse">
                     <div class="feature-image">
                         <div class="image-placeholder">
-                            <i data-lucide="smartphone"></i>
-                            <p>Mobile App</p>
+                            <i data-lucide="smartphone" class="w-16 h-16 text-accent"></i>
+                            <p class="text-muted-foreground mt-4">Mobile App</p>
                         </div>
                     </div>
                     <div class="feature-content">
-                        <h3>Mobile App Control</h3>
-                        <p>
-                            Complete control and monitoring through our intuitive mobile app. 
-                            Get real-time updates, adjust settings, and track plant health from anywhere.
+                        <h3 class="text-2xl font-bold text-foreground mb-4">Mobile Control</h3>
+                        <p class="text-lg text-muted-foreground mb-6">
+                            Control and monitor your plants from anywhere with our intuitive mobile app. 
+                            Get real-time updates and insights about your garden's health.
                         </p>
                         <ul class="feature-list">
-                            <li>Real-time monitoring</li>
-                            <li>Custom care schedules</li>
-                            <li>Plant health analytics</li>
+                            <li>Real-time monitoring dashboard</li>
+                            <li>Plant health notifications</li>
+                            <li>Care history and analytics</li>
                             <li>Remote control capabilities</li>
                         </ul>
                     </div>
@@ -444,68 +652,87 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
+    <footer id="contact" class="bg-card border-t border-border/50">
+        <div class="container mx-auto px-6 py-16">
             <div class="footer-content">
+                <!-- Company Info -->
                 <div class="footer-section">
-                    <img src="images/a82d138d-d981-495b-971a-1db1f7dad935.png" alt="LeafLogic" class="footer-logo">
-                    <p>
-                        Revolutionizing indoor gardening with AI-powered automation. 
-                        Let your plants thrive on autopilot with Botani, the smart plant care robot.
+                    <div class="footer-logo">
+                        <img src="images/a82d138d-d981-495b-971a-1db1f7dad935.png" alt="LeafLogic" class="h-8 w-auto">
+                    </div>
+                    <p class="text-muted-foreground mt-4 max-w-md">
+                        Revolutionizing indoor gardening through AI-powered robotics and intelligent plant care systems.
                     </p>
                     
-                    <div class="contact-info">
+                    <!-- Contact Info -->
+                    <div class="contact-info mt-6">
                         <div class="contact-item">
-                            <i data-lucide="mail"></i>
+                            <i data-lucide="mail" class="w-4 h-4"></i>
                             <span>leaflogic.info@gmail.com</span>
                         </div>
                         <div class="contact-item">
-                            <i data-lucide="phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                        <div class="contact-item">
-                            <i data-lucide="map-pin"></i>
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
                             <span>Portland, Oregon</span>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Quick Links -->
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 class="text-lg font-bold text-foreground mb-4">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#product">Product</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#product">Products</a></li>
                     </ul>
                 </div>
-                
+
+                <!-- Social Links -->
                 <div class="footer-section">
-                    <h4>Connect With Us</h4>
-                    <p>Follow our journey and get updates on Botani's development.</p>
-                    
+                    <h4 class="text-lg font-bold text-foreground mb-4">Connect With Us</h4>
                     <div class="social-links">
-                        <a href="#" aria-label="GitHub">
-                            <i data-lucide="github"></i>
+                        <a href="#" class="social-link">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
-                        <a href="#" aria-label="LinkedIn">
-                            <i data-lucide="linkedin"></i>
+                        <a href="#" class="social-link">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
                         </a>
-                        <a href="#" aria-label="Twitter">
-                            <i data-lucide="twitter"></i>
+                        <a href="#" class="social-link">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="github" class="w-5 h-5"></i>
                         </a>
                     </div>
-                    
-                    <div class="newsletter">
-                        <h5>Stay Updated</h5>
-                        <p>Get notified about Botani's launch and updates.</p>
-                        <button class="btn btn-secondary">Notify Me</button>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-section">
+                    <h5 class="text-lg font-bold text-foreground mb-4">Stay Updated</h5>
+                    <p class="text-muted-foreground mb-4">
+                        Get the latest updates on our products and research.
+                    </p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border border-border rounded-lg bg-background text-foreground">
+                        <button class="btn btn-primary">Subscribe</button>
                     </div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 LeafLogic. All rights reserved.</p>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-muted-foreground text-sm">
+                        © 2024 LeafLogic. All rights reserved.
+                    </p>
+                    <div class="flex gap-6 mt-4 md:mt-0">
+                        <a href="#" class="text-muted-foreground hover:text-accent text-sm">Privacy Policy</a>
+                        <a href="#" class="text-muted-foreground hover:text-accent text-sm">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
