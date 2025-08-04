@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>leaflogic-botani-showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>LeafLogic</title>
     <link rel="icon" href="images/9d8329e4-165d-41ba-a93d-19c6486d62db.png" type="image/png">
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <meta name="description" content="AI-powered robot that revolutionizes indoor gardening with intelligent plant care and monitoring" />
+    <meta name="author" content="LeafLogic" />
 
-    <meta property="og:title" content="leaflogic-botani-showcase" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="LeafLogic - AI-Powered Plant Care" />
+    <meta property="og:description" content="AI-powered robot that revolutionizes indoor gardening with intelligent plant care and monitoring" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="images/a82d138d-d981-495b-971a-1db1f7dad935.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:site" content="@leaflogic" />
+    <meta name="twitter:image" content="images/a82d138d-d981-495b-971a-1db1f7dad935.png" />
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -51,11 +51,11 @@
                     <a href="#contact" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Contact</a>
                 </nav>
 
-                <!-- CTA Button -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <button class="btn btn-outline">Learn More</button>
-                    <button class="btn btn-primary">Get Started</button>
-                </div>
+                                 <!-- CTA Button -->
+                 <div class="hidden lg:flex items-center space-x-4">
+                     <button class="btn btn-outline" onclick="scrollToSection('about')">About Us</button>
+                     <button class="btn btn-primary" onclick="scrollToSection('product')">View Product</button>
+                 </div>
 
                 <!-- Mobile Menu Button -->
                 <button class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Toggle menu">
@@ -71,10 +71,10 @@
                     <a href="#research" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Research</a>
                     <a href="#product" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Product</a>
                     <a href="#contact" class="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium">Contact</a>
-                    <div class="flex flex-col space-y-2 pt-4">
-                        <button class="btn btn-outline w-full">Learn More</button>
-                        <button class="btn btn-primary w-full">Get Started</button>
-                    </div>
+                                         <div class="flex flex-col space-y-2 pt-4">
+                         <button class="btn btn-outline w-full" onclick="scrollToSection('about')">About Us</button>
+                         <button class="btn btn-primary w-full" onclick="scrollToSection('product')">View Product</button>
+                     </div>
                 </nav>
             </div>
         </div>
@@ -89,66 +89,77 @@
         </div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center max-w-5xl mx-auto">
-                <!-- Main Headline -->
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-                    Let your plants thrive
-                    <span class="block text-accent">on autopilot</span>
-                </h1>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+                        Let your plants thrive
+                        <span class="block text-accent">on autopilot</span>
+                    </h1>
 
-                <!-- Subtitle -->
-                <p class="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                    Meet <span class="font-semibold text-accent">Botani</span>, the AI-powered robot that revolutionizes 
-                    indoor gardening with intelligent plant care and monitoring.
-                </p>
+                    <!-- Subtitle -->
+                    <p class="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+                        Meet <span class="font-semibold text-accent">Botani</span>, the AI-powered robot that revolutionizes 
+                        indoor gardening with intelligent plant care and monitoring.
+                    </p>
 
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    <button class="btn btn-primary btn-lg group">
-                        Discover Botani
-                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                    </button>
-                    <button class="btn btn-outline btn-lg group">
-                        <i data-lucide="play" class="mr-2 w-5 h-5"></i>
-                        Watch Demo
-                    </button>
+                    <!-- CTA Buttons -->
+                                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
+                         <button class="btn btn-primary btn-lg group" onclick="scrollToSection('product')">
+                             View Product
+                             <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                         </button>
+                         <button class="btn btn-outline btn-lg group" onclick="scrollToSection('team')">
+                             <i data-lucide="users" class="mr-2 w-5 h-5"></i>
+                             Meet Our Team
+                         </button>
+                     </div>
                 </div>
-
-                <!-- Key Features -->
-                <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                    <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
-                        <i data-lucide="bot" class="w-6 h-6 text-accent"></i>
-                        <span class="font-medium">AI-Powered</span>
-                    </div>
-                    <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
-                        <i data-lucide="leaf" class="w-6 h-6 text-accent"></i>
-                        <span class="font-medium">Smart Care</span>
-                    </div>
-                    <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
-                        <i data-lucide="zap" class="w-6 h-6 text-accent"></i>
-                        <span class="font-medium">24/7 Monitoring</span>
-                    </div>
+                
+                <div class="hero-robot-container">
+                    <img 
+                        src="images/23f690e5-1e77-4176-877e-b317294700f6.png" 
+                        alt="Botani AI Robot" 
+                        class="hero-robot-image"
+                    />
                 </div>
+                        </div>
 
-                <!-- Stats -->
-                <div class="mt-16 grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-accent mb-2">99%</div>
-                        <div class="text-muted-foreground">Plant Survival Rate</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-accent mb-2">50+</div>
-                        <div class="text-muted-foreground">Plant Species Supported</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-accent mb-2">24/7</div>
-                        <div class="text-muted-foreground">Continuous Monitoring</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-accent mb-2">90%</div>
-                        <div class="text-muted-foreground">Water Savings</div>
-                    </div>
+            <!-- Key Features -->
+            <div class="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
+                    <i data-lucide="bot" class="w-6 h-6 text-accent"></i>
+                    <span class="font-medium">AI-Powered</span>
                 </div>
+                <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
+                    <i data-lucide="leaf" class="w-6 h-6 text-accent"></i>
+                    <span class="font-medium">Smart Care</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 p-4 bg-secondary/30 rounded-xl">
+                    <i data-lucide="zap" class="w-6 h-6 text-accent"></i>
+                    <span class="font-medium">24/7 Monitoring</span>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-16 grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-accent mb-2">99%</div>
+                    <div class="text-muted-foreground">Plant Survival Rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-accent mb-2">50+</div>
+                    <div class="text-muted-foreground">Plant Species Supported</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-accent mb-2">24/7</div>
+                    <div class="text-muted-foreground">Continuous Monitoring</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-accent mb-2">90%</div>
+                    <div class="text-muted-foreground">Water Savings</div>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -280,10 +291,12 @@
                 
                 <div class="presentation-visual">
                     <div class="presentation-card">
-                        <div class="video-placeholder">
-                            <div class="play-icon">
-                                <i data-lucide="play" class="w-8 h-8"></i>
-                            </div>
+                        <div class="robot-image-container">
+                            <img 
+                                src="images/23f690e5-1e77-4176-877e-b317294700f6.png" 
+                                alt="Botani AI Robot" 
+                                class="robot-image"
+                            />
                         </div>
                     </div>
                     
@@ -606,9 +619,12 @@
             <div class="product-features">
                 <div class="feature-showcase">
                     <div class="feature-image">
-                        <div class="image-placeholder">
-                            <i data-lucide="bot" class="w-16 h-16 text-accent"></i>
-                            <p class="text-muted-foreground mt-4">AI-Powered Robot</p>
+                        <div class="robot-showcase-container">
+                            <img 
+                                src="images/23f690e5-1e77-4176-877e-b317294700f6.png" 
+                                alt="Botani AI Robot" 
+                                class="robot-showcase-image"
+                            />
                         </div>
                     </div>
                     <div class="feature-content">
@@ -652,13 +668,13 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-card border-t border-border/50">
+    <footer id="contact" class="bg-gradient-to-br from-green-50 to-green-100 border-t border-green-200">
         <div class="container mx-auto px-6 py-16">
             <div class="footer-content">
                 <!-- Company Info -->
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/a82d138d-d981-495b-971a-1db1f7dad935.png" alt="LeafLogic" class="h-8 w-auto">
+                                                 <img src="images/a82d138d-d981-495b-971a-1db1f7dad935.png" alt="LeafLogic" class="h-8 w-auto">
                     </div>
                     <p class="text-muted-foreground mt-4 max-w-md">
                         Revolutionizing indoor gardening through AI-powered robotics and intelligent plant care systems.
@@ -725,9 +741,9 @@
         <div class="footer-bottom">
             <div class="container mx-auto px-6 py-4">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-muted-foreground text-sm">
-                        © 2024 LeafLogic. All rights reserved.
-                    </p>
+                                         <p class="text-muted-foreground text-sm">
+                         © 2025 LeafLogic. All rights reserved.
+                     </p>
                     <div class="flex gap-6 mt-4 md:mt-0">
                         <a href="#" class="text-muted-foreground hover:text-accent text-sm">Privacy Policy</a>
                         <a href="#" class="text-muted-foreground hover:text-accent text-sm">Terms of Service</a>
@@ -737,7 +753,18 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-</body>
+         <!-- JavaScript -->
+     <script src="js/main.js"></script>
+     <script>
+         function scrollToSection(sectionId) {
+             const element = document.getElementById(sectionId);
+             if (element) {
+                 element.scrollIntoView({ 
+                     behavior: 'smooth',
+                     block: 'start'
+                 });
+             }
+         }
+     </script>
+ </body>
 </html> 
